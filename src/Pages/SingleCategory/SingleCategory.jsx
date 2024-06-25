@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'; // Make sure to import from react-router-dom
 import { fetchAsyncProductsOfCategory, getAllProductsByCategory, getCategoryProductsStatus } from '../../store/CategorySlice';
 import { STATUS } from '../../Utils/status';
+import CategoryDisplay from '../CategoryDisplay/CategoryDisplay';
 
 const SingleCategory = () => {
   const dispatch = useDispatch();
@@ -11,14 +12,14 @@ const SingleCategory = () => {
   const categoryProductStatus = useSelector(getCategoryProductsStatus);
 
   useEffect(() => {
-    console.log('Current category:', category);  // Log the current category to check its value
+    // console.log('Current category:', category);  // Log the current category to check its value
     if (category) {
       dispatch(fetchAsyncProductsOfCategory(category));  // Only dispatch if category is defined
     }
   }, [dispatch, category]);
 
   useEffect(() => {
-    console.log('Products of Category:', productsOfCategory); // Log the Redux state
+    // console.log('Products of Category:', productsOfCategory); // Log the Redux state
   }, [productsOfCategory]);
 
   if (categoryProductStatus === STATUS.LOADING) {
@@ -33,12 +34,7 @@ const SingleCategory = () => {
     <div>
       <h1>Products in {category}</h1>
       {productsOfCategory.length > 0 ? (
-        productsOfCategory.map((product) => (
-          <div key={product.id}>
-            <h3>{product.title}</h3>
-            <p>{product.description}</p>
-          </div>
-        ))
+        <CategoryDisplay products={productsOfCategory} />
       ) : (
         <div>No products found for this category.</div>
       )}

@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background-color:#FFD4DB ;
+}
 
 .custom-scrollbar {
     -ms-overflow-style: none;  /* IE and Edge */
@@ -12,13 +15,7 @@
   .custom-scrollbar::-webkit-scrollbar {
     display: none;  /* Chrome, Safari, and Opera */
   }
-  .home{
-    background-image: url('./assets/imagefive.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-  }
+ 
 
   
   .swiper {

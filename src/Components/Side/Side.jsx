@@ -4,7 +4,7 @@ import { assets } from "../../assets/assets"
 
 const Side = () => {
   return (
-    <div className="grid grid-cols-1 gap-2 px-2 ">
+    <div className="grid grid-cols-1 gap-2 px-2  ">
         <div className='bg-white px-4 py-10 rounded-md capitalize flex flex-col gap-6'>
        <div className="flex items-center gap-4">
        <div className="h-10 w-10 rounded-[50%] border-orange-400 border-1 border flex justify-center items-center ">

@@ -52,7 +52,7 @@ export const fetchAsyncCategories = createAsyncThunk('categories/fetch', async()
 export const fetchAsyncProductsOfCategory = createAsyncThunk('category-products/fetch', async (category) => {
     const response = await fetch(`${BASE_URL}products/category/${category}`);
     const data = await response.json();
-    console.log('API Response:', data); // Log the API response
+    // console.log('API Response:', data); // Log the API response
     return data.products;
 });
 

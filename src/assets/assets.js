@@ -12,6 +12,7 @@ import imagefive from "../assets/imagefive.jpg"
 import imagesix from "../assets/imagesix.png"
 import bank from "../assets/bank.png"
 import shopearn from "../assets/shopearn.png"
+import Loaderimg from "../assets/Loader.svg"
 
 
  export const assets = {
@@ -28,5 +29,6 @@ import shopearn from "../assets/shopearn.png"
     imgotwo,
     imgone,
     bank,
-    shopearn
+    shopearn,
+    Loaderimg,
  }
