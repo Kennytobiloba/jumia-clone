@@ -14,7 +14,7 @@ const Categories = () => {
      
   
   return (
-    <div className=' bg-white p-6 rounded-lg   shadow-2xl'>
+    <div className=' bg-white p-6 rounded-lg    shadow-2xl h-full'>
     {
         Category.slice(0,12).map((category, index) => (
             <ul key={index}>

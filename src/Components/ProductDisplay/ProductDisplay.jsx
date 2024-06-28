@@ -13,11 +13,11 @@ const ProductDisplay = ({ products, categorySlug }) => {
   }, {});
 
   return (
-    <div className="2xl:w-[80%] w-ful mx-auto mt-20 ">
+    <div className="2xl:w-[80%] w-ful mx-auto mt-8 ">
       {Object.keys(groupedProducts).map((category, idx) => (
         <div key={idx} className="category-group mb-10">
-          <div className='bg-red-500 py-2 flex justify-between items-center'>
-            <h2 className="lg:text-3xl md:text-xl text-[20px] font-bold mb-4 capitalize text-white pl-6 ">
+          <div className='bg-red-500  flex justify-between items-center p-2 '>
+            <h2 className="lg:text-2xl md:text-xl text-[20px] font-bold mb-4 capitalize text-white pl-6 ">
               {category.replace(/-/g, ' ')}
             </h2>
             <div>
@@ -28,7 +28,7 @@ const ProductDisplay = ({ products, categorySlug }) => {
               </Link>
             </div>
           </div>
-          <div className='grid grid-cols-4 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
             {groupedProducts[category].map(product => (
               <div key={product.id} className="product-card border p-4 rounded-lg bg-white shadow-lg">
                 <Link to={`/product/${product?.id}`}>

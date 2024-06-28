@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { getProductSingle, getSingleProductStatus } from '../../store/ProductSlice';
+import { Link } from 'react-router-dom';
+
 
 const CategoryDisplay = ({ products }) => {
     console.log("product",products)
@@ -23,10 +26,12 @@ const CategoryDisplay = ({ products }) => {
           <div className='grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4'>
             {groupedProducts[category].map(product => (
               <div key={product.id} className="product-card border p-4 rounded-lg bg-white shadow-lg">
+                <Link to={`/product/${product?.id}`}  className="">
                 <img className='img-cover w-full h-48 object-cover mb-4' src={product.images[0]} alt={product.title} />
                 <h3 className="font-bold text-lg mb-2">{product.title}</h3>
                 <p className="text-gray-700 mb-2">{product.brand}</p>
                 <p className="text-orange-500 font-semibold">${product.price}</p>
+                </Link>
               </div>
             ))}
           </div>

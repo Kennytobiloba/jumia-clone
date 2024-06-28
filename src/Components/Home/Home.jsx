@@ -7,25 +7,25 @@ import ProductPage from '../../Pages/ProductPage/ProductPage'
 const Home = () => {
   return (
   
-    <div className=' home mt-20 overflow-x-auto'>
-      <div className='2xl:w-[80%]  mx-auto grid grid-cols-5  min-w-[1200px] lg:w-[90%] overflow-x-auto '>
-        <div className='px-6 py-6 w-full'>
+    <div className=' overflow-hidden  flex flex-col '>
+      <div className='2xl:w-[80%] lg:w-[98%] md:w-[98%] w-[98%]  gap-2   mx-auto grid grid-cols-1 md:grid-cols-8  lg:grid-cols-5 mt-20 pt-8     '>
+       <div className='w-full h-full md:block hidden md:col-span-2 lg:col-span-1  '>
      
         <Categories/>
         </div>
 
-        <div className='mt-8 2xl:col-span-3 col-span-4  '>
+        <div className=' 2xl:col-span-3 md:col-span-6  lg:col-span-4  md:h-full h-[60vh] '>
          <Swipers/>
         </div> 
 
-        <div className=' mt-8 2xl:block hidden'>
+        <div className='  2xl:block hidden h-full bg-red-500'>
          <Side/>
 
         </div>
          
 
         </div>
-       <div className='2xl:w-[100%]  mx-auto  min-w-[1200px] lg:w-[90%]'>
+       <div className=' 2xl:w-full lg:w-[98%] md:w-[98%] mx-auto w-[98%]'>
        <ProductPage/> 
        </div>
           

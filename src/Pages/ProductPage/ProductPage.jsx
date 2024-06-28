@@ -29,7 +29,7 @@ const ProductPage = () => {
 
   return (
     <div className='w-full'>
-       <ProductDisplay products={catProductsFour} categorySlug={categories[3].slug} />
+       
       <ProductDisplay products={catProductsOne} categorySlug={categories[0].slug} />
       <ProductDisplay products={catProductsTwo} categorySlug={categories[1].slug} />
       <ProductDisplay products={catProductsThree} categorySlug={categories[2].slug} />

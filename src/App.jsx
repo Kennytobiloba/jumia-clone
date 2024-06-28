@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import SingleCategory from "./Pages/SingleCategory/SingleCategory";
 import SingleProduct from "./Pages/SingleProduct/SingleProduct";
+import Cart from "./Pages/Cart/Cart";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Home/>}  />
             <Route path="/category/:category" element={<SingleCategory/>}  />
             <Route path="/product/:id" element={<SingleProduct/>}/>
+            <Route path="/cart" element={<Cart/>}/>
             
           </Routes>
         </div>

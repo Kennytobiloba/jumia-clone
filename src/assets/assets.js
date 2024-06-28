@@ -13,6 +13,7 @@ import imagesix from "../assets/imagesix.png"
 import bank from "../assets/bank.png"
 import shopearn from "../assets/shopearn.png"
 import Loaderimg from "../assets/Loader.svg"
+import correct from "../assets/correct.png"
 
 
  export const assets = {
@@ -29,6 +30,7 @@ import Loaderimg from "../assets/Loader.svg"
     imgotwo,
     imgone,
     bank,
+    correct,
     shopearn,
     Loaderimg,
  }

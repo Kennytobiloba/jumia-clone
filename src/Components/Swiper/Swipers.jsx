@@ -16,7 +16,7 @@ import { assets } from '../../assets/assets';
 
 const Swipers = () => {
   return (
-    <div className=' h-[64vh] rounded-2xl'>
+    <div className=' h-full rounded-2xl'>
        <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -29,7 +29,8 @@ const Swipers = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper "
+
       >
         <SwiperSlide>
           <img src={assets.bank} className='w-full h-full object-cover' alt="" />
