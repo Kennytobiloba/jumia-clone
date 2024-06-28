@@ -50,7 +50,7 @@ const productSlice = createSlice({
 export const fetchAsyncProducts = createAsyncThunk('products/fetch', async(limit) => {
     const response = await fetch(`${BASE_URL}products?limit=${limit}`);
     const data = await response.json();
-    console.log("productss",data)
+    
     return data.products;
 });
 
@@ -58,7 +58,7 @@ export const fetchAsyncProducts = createAsyncThunk('products/fetch', async(limit
 export const fetchAsyncProductSingle = createAsyncThunk('product-singl/fetch', async(id) => {
     const response = await fetch(`${BASE_URL}products/${id}`);
     const data = await response.json();
-    console.log("single product", data);
+
     return data;
 });
 

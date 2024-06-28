@@ -5,6 +5,7 @@
 
 body{
   background-color:#FFD4DB ;
+  position: relative;
 }
 
 .custom-scrollbar {

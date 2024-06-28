@@ -14,7 +14,7 @@ const Home = () => {
         <Categories/>
         </div>
 
-        <div className=' 2xl:col-span-3 md:col-span-6  lg:col-span-4  md:h-full h-[60vh] '>
+        <div className=' 2xl:col-span-3 md:col-span-6  lg:col-span-4 -z-50 md:h-full h-[60vh] '>
          <Swipers/>
         </div> 
 
