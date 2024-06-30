@@ -55,7 +55,7 @@ const SingleProduct = () => {
   }
 
   return (
-    <div className="container mx-auto p-4 mt-8">
+    <div className="container mx-auto p-4 md:mt-8 ">
       <h1 className="text-3xl font-bold text-center mb-8">Single Product</h1>
       <div className="bg-white rounded-lg shadow-md p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="md:col-span-1">

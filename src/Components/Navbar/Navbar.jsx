@@ -27,25 +27,11 @@ const Navbar = () => {
     }
   };
 
-  const handleEdgeClick = (e) => {
-    const navbarWidth = navbarRef.current.offsetWidth;
-    const clickPosition = e.clientX;
-
-    if (clickPosition < navbarWidth * 0.1) {
-      scrollNavbar('left');
-    } else if (clickPosition > navbarWidth * 0.9) {
-      scrollNavbar('right');
-    }
-  };
-
   return (
     <div className='w-full fixed bg-white top-0 h-24 left-0 right-0 flex items-center shadow-lg'>
-      <div 
-        ref={navbarRef} 
-        className='navbar-container flex-1 flex items-center gap-6 overflow-hidden'
-        onClick={handleEdgeClick}
-      >
-        <div className='md:min-w-[700px] pl-8 lg:pl-0 mx-auto 2xl:w-[80%] lg:w-[90%] min-w-[900px] flex justify-between items-center gap-6'>
+      <button className='scroll-button md:hidden block' onClick={() => scrollNavbar('left')}>{"<"}</button>
+      <div ref={navbarRef} className='navbar-container flex-1 flex items-center gap-6 overflow-hidden'>
+        <div className='md:min-w-[700px] pl-4 lg:pl-0 mx-auto 2xl:w-[80%] lg:w-[90%] min-w-[900px] flex justify-between items-center gap-6'>
           <div className='lg:max-w-[170px] max-w-[120px]'>
             <img src={assets.Logo} alt="" className='w-full h-full' />
           </div>
@@ -94,6 +80,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <button className='scroll-button md:hidden block' onClick={() => scrollNavbar('right')}>{">"}</button>
       <div className='absolute top-24 md:hidden w-[50%] ml-6'>
         {menuOpen && (
           <Categories />

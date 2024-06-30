@@ -7,7 +7,7 @@ import ProductPage from '../../Pages/ProductPage/ProductPage'
 const Home = () => {
   return (
   
-    <div className=' overflow-hidden  flex flex-col '>
+    <div className='   flex flex-col overflow-hidden '>
       <div className='2xl:w-[80%] lg:w-[98%] md:w-[98%] w-[98%]  gap-2   mx-auto grid grid-cols-1 md:grid-cols-8  lg:grid-cols-5 mt-20 pt-8     '>
        <div className='w-full h-full md:block hidden md:col-span-2 lg:col-span-1  '>
      
