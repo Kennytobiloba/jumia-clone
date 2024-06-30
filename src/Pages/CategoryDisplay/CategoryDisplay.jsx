@@ -16,14 +16,14 @@ const CategoryDisplay = ({ products }) => {
   }, {});
 
   return (
-    <div className="2xl-[80%] mx-auto sm:mt-[15%] lg:mt-[8%] mt-[30%]   min-w-[1200px] lg:w-[90%] overflow-auto ">
+    <div className="2xl-[80%] mx-auto sm:mt-[15%] lg:mt-[8%] mt-[22%] w-[98%]    lg:w-[90%] overflow-auto ">
       {Object.keys(groupedProducts).map((category, idx) => (
         <div key={idx} className="category-group mb-10">
           <div className='bg-red-500 py-2 flex justify-between'>
           <h2 className="lg:text-3xl md:text-xl text-[20px] font-bold mb-4 capitalize  text-white pl-6 ">{category.replace(/-/g, ' ')}</h2>
           
           </div>
-          <div className='grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
             {groupedProducts[category].map(product => (
               <div key={product.id} className="product-card border p-4 rounded-lg bg-white shadow-lg">
                 <Link to={`/product/${product?.id}`}  className="">
