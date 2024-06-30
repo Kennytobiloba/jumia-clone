@@ -5,7 +5,7 @@
 
 body{
   background-color:#FFD4DB ;
-  position: relative;
+  
 }
 
 .custom-scrollbar {
@@ -62,4 +62,26 @@ body{
     margin-right: auto;
     margin-left: auto;
   }
+  /* Existing styles */
+.navbar-container {
+  display: flex;
+  flex-grow: 1;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+}
+
+.navbar-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.scroll-button {
+  background-color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 10px;
+}
+
   
